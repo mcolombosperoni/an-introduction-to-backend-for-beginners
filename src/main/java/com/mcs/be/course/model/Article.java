@@ -2,10 +2,8 @@ package com.mcs.be.course.model;
 
 import lombok.*;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.io.Serializable;
 
 /**
  * Created by mcolombo on 02/12/17.
@@ -13,13 +11,28 @@ import javax.persistence.Id;
 @Entity
 @Data
 @NoArgsConstructor
-public class Article {
+@Table
+public class Article implements Serializable{
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
+    @Column
     private Long id;
 
+    @Column
+    private String title;
 
+    @Column
+    private String image;
+
+    @Column
+    private String content;
+
+    @Column
+    private String tag;
+
+    @Column
+    private Boolean approve;
 
 
 }
