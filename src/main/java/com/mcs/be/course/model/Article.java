@@ -16,16 +16,16 @@ public class Article implements Serializable{
 
     @Id
     @GeneratedValue(strategy= GenerationType.AUTO)
-    @Column
+    @Column(nullable = false)
     private Long id;
 
-    @Column
+    @Column(nullable = false)
     private String title;
 
-    @Column
+    @Column(nullable = false)
     private String image;
 
-    @Column
+    @Column(nullable = false)
     private String content;
 
     @Column

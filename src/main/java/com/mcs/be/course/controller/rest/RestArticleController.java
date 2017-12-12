@@ -1,29 +1,50 @@
 package com.mcs.be.course.controller.rest;
 
 import com.mcs.be.course.dto.ArticleDto;
+import com.mcs.be.course.exception.ElementNotFound;
 import com.mcs.be.course.facade.ArticleFacade;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
-
-import java.util.ArrayList;
+import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 /**
  * Created by mcolombo on 02/12/17.
  */
 @RestController
-@RequestMapping("/articles")
+@RequestMapping(value = "/articles")
 public class RestArticleController {
+
+    private static final Logger LOGGER = LogManager.getLogger(RestArticleController.class);
+
 
     @Autowired
     private ArticleFacade articleFacade;
 
 
-    @RequestMapping(method = RequestMethod.GET)
-    public List<ArticleDto> articles() {
+    @GetMapping
+    public List<ArticleDto> getArticles() {
+        LOGGER.debug("Called article list");
         return articleFacade.retrieveAllArticles();
+    }
+
+    @GetMapping(value = "/{id}")
+    public ArticleDto getArticle(@PathVariable("id") Long id) throws ElementNotFound {
+        LOGGER.debug("Called article detail, id {}", id);
+        return articleFacade.retrieveArticleById(id);
+    }
+
+    @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT, RequestMethod.PATCH})
+    public ArticleDto createOrUpdateArticle(@RequestBody ArticleDto articleDto) throws ElementNotFound {
+        LOGGER.info("Called create article, articleDto passed {}", articleDto);
+        return articleFacade.saveOrUpdate(articleDto);
+    }
+
+    @PatchMapping(value = "/like")
+    public ArticleDto like(@RequestBody ArticleDto articleDto ) throws ElementNotFound {
+        LOGGER.info("Called like update article, id passed {}", articleDto.getId());
+        return articleFacade.addLikeToArticle(articleDto.getId());
     }
 
 }
