@@ -23,7 +23,7 @@ Configutation:
     RollingFile:
       - name: RollingFile_Appender
         fileName: ${log-path}/rollingfile.log
-        filePattern: "$${log-path}/archive/rollingfile.log.%d{yyyy-MM-dd-hh-mm}-%i.gz"
+        filePattern: "$${log-path}/archive/rollingfile.log.%d{yyyy-MM-dd}-%i.gz"
         PatternLayout:
           pattern: "[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n"
         Policies:
