@@ -4,6 +4,7 @@ import com.mcs.be.course.dao.ArticleDao;
 import com.mcs.be.course.exception.ElementNotFound;
 import com.mcs.be.course.model.Article;
 import com.mcs.be.course.service.ArticleService;
+import lombok.Setter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
@@ -18,6 +19,7 @@ import java.util.Objects;
 public class ArticleServiceImpl implements ArticleService {
 
     @Autowired
+    @Setter
     private ArticleDao articleDao;
 
     @Override

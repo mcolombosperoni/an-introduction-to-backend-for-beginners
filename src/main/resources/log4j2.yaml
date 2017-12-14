@@ -42,13 +42,23 @@ Configutation:
           - ref: Console_Appender
 
       Logger:
-        - name: com.mcs.
+        - name: com.mcs.be.course
           additivity: false
           level: debug
           AppenderRef:
             - ref: Console_Appender
-              level: info
+              level: debug
 #            - ref: File_Appender
 #              level: error
+            - ref: RollingFile_Appender
+              level: debug
+
+
+        - name: com.mcs.be.course.aspect.DebuggingLoggingAspect
+          additivity: false
+          level: debug
+          AppenderRef:
+            - ref: Console_Appender
+              level: debug
             - ref: RollingFile_Appender
               level: debug

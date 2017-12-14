@@ -25,19 +25,16 @@ public class RestArticleController {
 
     @GetMapping
     public List<ArticleDto> getArticles() {
-        LOGGER.debug("Called article list");
         return articleFacade.retrieveAllArticles();
     }
 
     @GetMapping(value = "/{id}")
     public ArticleDto getArticle(@PathVariable("id") Long id) throws ElementNotFound {
-        LOGGER.debug("Called article detail, id {}", id);
         return articleFacade.retrieveArticleById(id);
     }
 
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT, RequestMethod.PATCH})
     public ArticleDto createOrUpdateArticle(@RequestBody ArticleDto articleDto) throws ElementNotFound {
-        LOGGER.info("Called create article, articleDto passed {}", articleDto);
         return articleFacade.saveOrUpdate(articleDto);
     }
 

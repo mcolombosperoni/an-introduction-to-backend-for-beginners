@@ -18,8 +18,8 @@ public class RestResponseEntityExceptionHandler extends ResponseEntityExceptionH
 
     @ExceptionHandler(value = { ElementNotFound.class })
     protected @ResponseBody ResponseEntity<Object> handleElementNotFound(Exception ex, WebRequest request) {
-        ApiError error = new ApiError(HttpStatus.NOT_FOUND,ex.getMessage(), ex.getClass().getName());
-        return handleExceptionInternal(ex, error, new HttpHeaders(), HttpStatus.NOT_FOUND, request);
+        ApiError error = new ApiError(HttpStatus.OK, ex.getMessage(), ex.getClass().getName());
+        return handleExceptionInternal(ex, error, new HttpHeaders(), HttpStatus.OK, request);
     }
 
 
