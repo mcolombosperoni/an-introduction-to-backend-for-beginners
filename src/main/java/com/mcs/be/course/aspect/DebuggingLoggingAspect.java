@@ -7,7 +7,6 @@ import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.stereotype.Component;
-import sun.reflect.generics.tree.ClassSignature;
 
 /**
  * Created by mcolombo on 14/12/17.
