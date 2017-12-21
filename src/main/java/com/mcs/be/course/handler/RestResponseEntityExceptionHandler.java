@@ -1,6 +1,7 @@
-package com.mcs.be.course.exception;
+package com.mcs.be.course.handler;
 
 import com.mcs.be.course.dto.ApiError;
+import com.mcs.be.course.exception.ElementNotFound;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

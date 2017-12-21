@@ -14,6 +14,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/articles")
+
 public class RestArticleController {
 
     private static final Logger LOGGER = LogManager.getLogger(RestArticleController.class);
@@ -33,11 +34,13 @@ public class RestArticleController {
         return articleFacade.retrieveArticleById(id);
     }
 
+    @CrossOrigin
     @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT, RequestMethod.PATCH})
     public ArticleDto createOrUpdateArticle(@RequestBody ArticleDto articleDto) throws ElementNotFound {
         return articleFacade.saveOrUpdate(articleDto);
     }
 
+    @CrossOrigin
     @PatchMapping(value = "/like")
     public ArticleDto like(@RequestBody ArticleDto articleDto ) throws ElementNotFound {
         LOGGER.info("Called like update article, id passed {}", articleDto.getId());
