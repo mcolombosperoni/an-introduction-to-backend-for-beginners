@@ -26,6 +26,12 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     @Value("${spring.view.view-names}")
     private String viewNames = "";
 
+    @Value("${spring.application.name}")
+    private String appName = "";
+
+    @Value("${app.version}")
+    private String appVersion = "";
+
     @Bean
     public ViewResolver jspViewResolver() {
         final InternalResourceViewResolver vr = new InternalResourceViewResolver();
@@ -34,6 +40,8 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
         vr.setViewClass(JstlView.class);
         vr.setViewNames(viewNames);
         vr.setOrder(1);
+        vr.getAttributesMap().put("appName", appName);
+        vr.getAttributesMap().put("appVersion", appVersion + "_" + System.currentTimeMillis());
         return vr;
     }
 
