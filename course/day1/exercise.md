@@ -58,5 +58,6 @@ If Tomcat is started up without any issue you should be able to reach your hello
 The same result could be reached also using Postman creating a new GET request with result type HTML or Auto. 
 
 
-
+If you want you can open the project just created also with your IDE, for example if you are using Eclipse, STS or IntelliJ IDEA you can easily import using maven support functionality.
+![image](importmvneclipse.jpg)
 

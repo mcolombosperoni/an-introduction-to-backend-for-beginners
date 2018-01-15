@@ -69,3 +69,16 @@ Download Core binary package version and unzip inside a folder. After that:
 ### Postman
 In this course we will use postman as tool to make calls to REST services. If you don't have this tool or an equivalent one download and install the latest version.
 [![image](http://www.oracle.com//ocom/groups/public/@ocom/documents/digitalasset/1612430.png)](https://www.getpostman.com/)
+
+
+### IDE
+In this course we have to use an IDE with support for Java and Spring like Eclipse, STS, Intellij IDEA, Netbeans, ... You are free to use your favorite IDE.
+If you don't have one you can install pivotal Spring Tool Suite.
+[![image](http://www.oracle.com//ocom/groups/public/@ocom/documents/digitalasset/1612430.png)](https://spring.io/tools)
+
+Download package depending on your OS System and install. After that:
+  - remember to set Proxy into Preferences in case you need
+  - remember to set correct JDK under Preferences > Installed JREs
+  ![image](configurejavaeclipse.jpg)
+  - remember to add your external Maven under Preferences > Maven
+  ![image](configuremvneclipse.jpg)
