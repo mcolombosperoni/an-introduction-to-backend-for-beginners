@@ -12,6 +12,6 @@ This application is only a part of an entire solution made to perform a Fullstac
 ###Course structure
 
 Day 1 - EE Architecture and Tools: 
-- [Installation guide](InstallTools.md)
+- [Installation guide](course/day1/InstallTools.md)
 - [Exercise](course/day1/exercise.md)
         

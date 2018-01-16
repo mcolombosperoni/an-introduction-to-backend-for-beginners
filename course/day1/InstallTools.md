@@ -33,7 +33,7 @@ Download binary package version and unzip inside a folder. After that:
     OS name: "mac os x", version: "10.13.1", arch: "x86_64", family: "mac"
     ```
 ### Maven settings
-Maven `settings.xml` file is inside maven conf folder. Here you can change global configurations and add for example proxy settings. If you want to override global settings you can create inside your local `~/m2` folder a copy of the global `settings.xml` file and edit this one. 
+Maven `settings.xml` file is inside maven conf folder. Here you can change global configurations and add for example proxy settings. If you want to override global settings you can create inside your local `~/.m2` folder a copy of the global `settings.xml` file and edit this one. 
 ```xml
 <proxy>
     <id>sopra_http</id>
@@ -57,10 +57,12 @@ In this course we will use tomcat 8+ version as container. If you haven't please
 [![image](http://www.oracle.com//ocom/groups/public/@ocom/documents/digitalasset/1612430.png)](https://tomcat.apache.org/download-80.cgi)
 
 Download Core binary package version and unzip inside a folder. After that:
-  - add setenv.bat or setenv.sh file inside tomcat bin folder with following content to enable remote debugging
+  - add setenv.bat or setenv.sh file inside tomcat bin folder with following content to enable remote debugging (use `set` instead of `export in Windows)
     ```sh
-    CATALINA_OPTS=-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n
-    ```
+    export CATALINA_OPTS="-Xdebug -Xrunjdwp:transport=dt_socket,address=8000,server=y,suspend=n"
+    ````
+  - on OSX/Unix systems `chmod +x setenv.sh` to give execute permissions to the file  
+  - on OSX/Unix systems from tomcat folder launch `chmod -R +x bin` to give execute permissions to tomcat commands
   - open CLI pointing tomcat bin folder and run command `catalina.sh run` or `catalina.bat run`
   - check for a positive result opening browser at http://localhost:8080
     ![image](https://assets.digitalocean.com/articles/tomcat8_1604/splashscreen.png)
