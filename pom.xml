@@ -6,10 +6,46 @@
 	<groupId>com.mcs.be.course</groupId>
 	<artifactId>backend-course</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>backend-course</name>
 	<description>Demo project for Backend Course</description>
+	<organization></organization>
+
+	<url></url>
+
+	<prerequisites>
+		<maven>${maven.min-version}</maven>
+	</prerequisites>
+
+	<scm>
+		<connection>scm:git:https://github.com/mcolombosperoni/an-introduction-to-backend-for-beginners.git</connection>
+		<developerConnection>scm:git:https://github.com/mcolombosperoni/an-introduction-to-backend-for-beginners.git</developerConnection>
+		<url>https://github.com/mcolombosperoni/an-introduction-to-backend-for-beginners.git</url>
+		<tag>master</tag>
+	</scm>
+
+	<ciManagement>
+		<system>Travis CI</system>
+		<url>https://travis-ci.org/mcolombosperoni/an-introduction-to-backend-for-beginners.svg</url>
+	</ciManagement>
+
+	<developers>
+		<developer>
+			<name>Matteo Colombo Speroni</name>
+			<email>matteo.colombo.work@gmail.com</email>
+		</developer>
+	</developers>
+
+	<properties>
+		<projectName>${project.name}</projectName>
+
+		<maven.min-version>3.3.9</maven.min-version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.8</java.version>
+
+	</properties>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -17,12 +53,6 @@
 		<version>1.5.9.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<java.version>1.8</java.version>
-	</properties>
 
 	<dependencies>
 		<dependency>
@@ -55,6 +85,7 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
@@ -146,6 +177,8 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+
+		<finalName>backend-course</finalName>
 	</build>
 
 
