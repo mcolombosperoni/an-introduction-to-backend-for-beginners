@@ -39,3 +39,10 @@ java-exercises/
 GOAL: Implement all methods necessary to make all tests contained inside `CollectionInventoryImplTest.java`.  
 
 You can use all libraries you want to help in your development adding them to maven dependencies. 
+
+
+HINT:
+- Read tests before starting coding because the test contains the expected behaviour
+- Think to which collection implementation to use inside `CollectionInventoryImpl`
+- remember the importance of hash equal contract and how collections use it to insert element belonging to class type
+- remember how you could define natural and custom ordering
