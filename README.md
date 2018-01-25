@@ -14,9 +14,11 @@ This application is only a part of an entire solution made to perform a Fullstac
 ### Course structure
 
 Day 1 - EE Architecture and Tools: 
+- [Slide Day 1](course/day1/backend_course_day1.pdf)
 - [Installation guide](course/day1/InstallTools.md)
 - [Exercise](course/day1/exercise.md)
 
 Day 2 - Java SE: 
+- [Slide Day 2](course/day2/backend_course_day2.pdf)
 - [Exercise](course/day2/exercise.md)
         

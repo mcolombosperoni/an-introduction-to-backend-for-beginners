@@ -1,4 +1,4 @@
-# Learn java in a TDD mode 
+# Learn java in a TDD way 
 
 Download [java-exercises.zip](java-exercises.zip) file and import into your IDE as maven project.
 
@@ -46,3 +46,6 @@ HINT:
 - Think to which collection implementation to use inside `CollectionInventoryImpl`
 - remember the importance of hash equal contract and how collections use it to insert element belonging to class type
 - remember how you could define natural and custom ordering
+
+
+Solution: [java-exercises-examplesolution.zip](java-exercises-examplesolution.zip).
