@@ -37,9 +37,9 @@ Once started you can try the sequent urls:
 
 GOAL: Implement everything necessary to see a product list and a product detail page like following.
 
-![image](list.jpg)
+![image](list.png)
 
-![image](detail.jpg)
+![image](detail.png)
 
 You can use all libraries you want to help in your development adding them to maven dependencies. 
 
