@@ -21,4 +21,7 @@ Day 1 - EE Architecture and Tools:
 Day 2 - Java SE: 
 - [Slide Day 2](course/day2/backend_course_day2.pdf)
 - [Exercise](course/day2/exercise.md)
+
+Day 3 - Java EE: 
+- [Exercise](course/day3/exercise.md)
         
