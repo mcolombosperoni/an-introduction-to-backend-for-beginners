@@ -23,5 +23,6 @@ Day 2 - Java SE:
 - [Exercise](course/day2/exercise.md)
 
 Day 3 - Java EE: 
+- [Slide Day 3](course/day3/backend_course_day3.pdf)
 - [Exercise](course/day3/exercise.md)
         
