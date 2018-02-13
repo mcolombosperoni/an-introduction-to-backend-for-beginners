@@ -27,5 +27,5 @@ Day 3 - Java EE:
 - [Exercise](course/day3/exercise.md)
     
 Day 4 - Spring MVC: 
-- [Slide Day 3](course/day4/backend_course_day4.pdf)
+- [Slide Day 4](course/day4/backend_course_day4.pdf)
 - [Exercise](course/day4/exercise.md)
