@@ -1,4 +1,4 @@
-# Learn how to implement a simple web application using JEE features
+# Learn how to implement a simple web application using SpringBoot and SpringMVC
 
 Download [backend-course_day4.zip](backend-course_day4.zip) file and import into your IDE as maven project.
 
@@ -55,6 +55,19 @@ HINT:
 - inject the InventoryService as a dependency inside the controller
 - implement the two methods above with the right logic to call the right view
 
+Additional:
+- if you finish the exercise you could try to handle also a redirect to productlist view in case of product not found
+- define, create and configure a new interceptor that make a performance calculation on time needed to perform a controller method.
+```
+HINT for interceptor
+//to retrieve time in millisecond you can use
+System.currentTimeMills();
+
+//you could save information between inside interceptor methods saving them inside request
+request.setAttribute("startTime", value)
+```
 
 You can use all libraries you want to help in your development adding them to maven dependencies. 
+
+Solution: [backend-course_day4_examplesolution.zip](backend-course_day4_examplesolution.zip).
 
