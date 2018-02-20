@@ -18,12 +18,12 @@ public class DebuggingLoggingAspect {
 
 
     @Around("execution(* com.mcs.be.course..*.*(..))")
-    public Object userAdvice(ProceedingJoinPoint joinPoint) throws Throwable{
+    public Object logExecutionTimeAdvice(ProceedingJoinPoint joinPoint) throws Throwable{
         long start = System.currentTimeMillis();
         Object result = joinPoint.proceed();
         if (LOGGER.isDebugEnabled()){
             LOGGER.debug(
-                    "{} {}({}): {} in msec",
+                    "{} {}({}): {} in {} msec",
                     joinPoint.getTarget().toString(),
                     MethodSignature.class.cast(joinPoint.getSignature()).getMethod().getName(),
                     joinPoint.getArgs(),
