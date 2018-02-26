@@ -98,4 +98,5 @@ HINT for Additional
 
 You can use all libraries you want to help in your development adding them to maven dependencies. 
 
+Solution: [backend-course_day5_examplesolution.zip](backend-backend-course_day5_examplesolution.zip).
 

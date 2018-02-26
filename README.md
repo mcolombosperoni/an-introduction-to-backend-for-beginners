@@ -33,3 +33,6 @@ Day 4 - Spring MVC:
 Day 5 - Spring MVC: 
 - [Slide Day 5](course/day5/backend_course_day5.pdf)
 - [Exercise](course/day5/exercise.md)
+
+Day 6 - Create a SpringBoot webapp from scratch:
+- [Exercise](course/day6)
