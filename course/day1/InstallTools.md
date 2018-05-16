@@ -21,7 +21,7 @@ In this course we will use Maven 3+ version to build and handle dependencies. If
 If you have OSX you can also install automatically with brew using command `brew install maven`
 
 Download binary package version and unzip inside a folder. After that:
-  - add M2_HOME to environment variables pointing to JDK folder and add to PATH variable
+  - add M2_HOME to environment variables pointing to Maven folder and add to PATH variable
   - open CLI and run command `mvn -version`
   - check for a positive result, the result must be like following
     ```bash
