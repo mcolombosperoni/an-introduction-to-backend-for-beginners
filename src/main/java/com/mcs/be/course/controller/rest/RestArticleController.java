@@ -14,7 +14,7 @@ import java.util.List;
  */
 @RestController
 @RequestMapping(value = "/articles")
-
+@CrossOrigin
 public class RestArticleController {
 
     private static final Logger LOGGER = LogManager.getLogger(RestArticleController.class);
@@ -34,17 +34,22 @@ public class RestArticleController {
         return articleFacade.retrieveArticleById(id);
     }
 
-    @CrossOrigin
-    @RequestMapping(method = {RequestMethod.POST, RequestMethod.PUT, RequestMethod.PATCH})
-    public ArticleDto createOrUpdateArticle(@RequestBody ArticleDto articleDto) throws ElementNotFound {
+    @RequestMapping(method = {RequestMethod.POST})
+    public ArticleDto createArticle(@RequestBody ArticleDto articleDto) throws ElementNotFound {
         return articleFacade.saveOrUpdate(articleDto);
     }
 
-    @CrossOrigin
     @PatchMapping(value = "/like")
+    @Deprecated
     public ArticleDto like(@RequestBody ArticleDto articleDto ) throws ElementNotFound {
         LOGGER.info("Called like update article, id passed {}", articleDto.getId());
         return articleFacade.addLikeToArticle(articleDto.getId());
+    }
+
+    @RequestMapping(value = "/{id}", method = {RequestMethod.PUT, RequestMethod.PATCH})
+    public ArticleDto updateArticle(@PathVariable("id") Long id, @RequestBody ArticleDto articleDto) throws ElementNotFound {
+        articleDto.setId(id);
+        return articleFacade.saveOrUpdate(articleDto);
     }
 
 }

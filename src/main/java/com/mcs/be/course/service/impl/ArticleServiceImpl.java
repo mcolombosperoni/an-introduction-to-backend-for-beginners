@@ -78,7 +78,7 @@ public class ArticleServiceImpl implements ArticleService {
             entity.setTag(article.getTag());
         }
 
-        if (article.getApprove()){
+        if (article.getApprove() != null){
             entity.setApprove(article.getApprove());
         }
 
