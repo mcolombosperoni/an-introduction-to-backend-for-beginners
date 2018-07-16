@@ -68,7 +68,7 @@ To test your services create a new collections and requests inside Postman.
 GOAL: Implement everything necessary to expose these REST service:'
 - `/articles` HTTP method `GET` 
 - `/articles/:id/` HTTP method `GET` 
-- `/articles/like` HTTP method `PATCH` message body `{"id" : 1}` 
+- `/articles/:id/` HTTP method `PATCH` message body `{"like" : true}` 
 
 HINT:
 - Check TODO inside `RestArticleController.java` and `ArticleMapping.java`
