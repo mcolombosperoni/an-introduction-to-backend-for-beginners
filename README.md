@@ -36,3 +36,7 @@ Day 5 - Spring MVC:
 
 Day 6 - Create a SpringBoot webapp from scratch:
 - [Exercise](course/day6)
+
+Day 7 - Integrating FE and BE:
+- [Slide Day 7](course/day7/backend_course_day7.pdf)
+- [Exercise](course/day7)
