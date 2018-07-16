@@ -29,20 +29,24 @@ public class MvcArticleController {
     @GetMapping("/")
     public String welcome(Map<String, Object> model) {
 
-        final List<ArticleDto> articles = articleFacade.retrieveAllArticles();
-
-        model.put("time", new Date());
-        model.put("articleList", articles);
+        prepareModel(model);
 
         return "jsp/welcome";
     }
 
     @GetMapping("/w2")
     public String welcome2(Map<String, Object> model) {
-        model.put("time", new Date());
 
+        prepareModel(model);
 
         return "thymeleaf/welcome";
+    }
+
+    private void prepareModel(Map<String, Object> model) {
+        final List<ArticleDto> articles = articleFacade.retrieveAllArticles();
+
+        model.put("time", new Date());
+        model.put("articleList", articles);
     }
 
 }
