@@ -46,7 +46,7 @@ Maven `settings.xml` file is inside maven conf folder. Here you can change globa
 <proxy>
     <id>sopra_https</id>
      <active>true</active>
-     <protocol>http</protocol>
+     <protocol>https</protocol>
      <host>miln.proxy.corp.sopra</host>
      <port>8080</port>
      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
