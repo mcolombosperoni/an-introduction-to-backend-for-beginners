@@ -10,6 +10,31 @@ The application has its own frontend based on spring MVC but exposes some REST s
 
 This application is only a part of an entire solution made to perform a Fullstack course splitted in three modules: backend, [frontend](https://marcomontalbano.github.io/an-introduction-to-frontend-for-beginners), react.
 
+If you want to test the application you can clone the repository and run it using the following command:
+
+Prerequisites:
+Apache Maven >= 3.3.9 
+Java >= 1.8
+
+```bash
+
+mvn clean package
+mvn spring-boot:run
+
+```
+
+The homepage is reachable at: 
+- http://localhost:8080/ --> redirect to (JSP Version)
+- (JSP Version) http://localhost:8080/webmvc/jsp
+- (Thymeleaf Version) http://localhost:8080/webmvc/thymeleaf
+
+The rest services are reacheable via POSTMAN at: 
+```bash
+GET http://localhost:8080/api/v1/articles
+GET http://localhost:8080/api/v1/articles/1
+PATCH http://localhost:8080/api/v1/articles/1  eg body. {"like" : true}  HEADER `Content-Type application/json`
+```
+
 
 ### Course structure
 

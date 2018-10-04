@@ -13,7 +13,7 @@ import java.util.List;
  * Created by mcolombo on 02/12/17.
  */
 @RestController
-@RequestMapping(value = "/articles")
+@RequestMapping(value = "/api/v1/articles")
 @CrossOrigin
 public class RestArticleController {
 
