@@ -83,11 +83,12 @@ After implementation when everything works try to reach this URL and check if th
 Additional:
 - add an handle method inside `RestResponseEntityExceptionHandler.java` to handle the response in case of `ElementNotFound`exception with a 200 HttpStatus and a custom message. 
 - `/articles/search?by=:searchBy&eq=:searchValue` HTTP method `GET`. 
+- '/articles that add a new article passed as request parameter
 - open the class `DebuggingLoggingAspect.java` that is already annotated as Aspect Component and add a new method with a joint point to log method call and method response time.
 ```
 HINT for Additional
 1) Use the other method inside the RestResponseEntityExceptionHandler as an example.
-2) Follow the layer structure implementing a new method on controller, facade, dervice, dao.
+2-3) Follow the layer structure implementing a new method on controller, facade, dervice, dao.
 3) Use an around joint point with execution regular expression on package to match all pointcuts. 
    Use string interpolation inside LOGGER.debug("...") eg.  LOGGER.debug("blabla {} bla {} bla",arg0,arg1);
    Use System.currentTimeMillis() to get milliseconds
